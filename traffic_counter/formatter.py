@@ -22,9 +22,9 @@ def format_report(
     least: list[TrafficRecord],
 ) -> str:
     sections = [
-        format_total(total),
-        format_daily(daily),
-        format_records(top),
-        format_records(least),
+        "Total cars seen:\n" + format_total(total),
+        "Cars per day:\n" + format_daily(daily),
+        "Top 3 half-hours:\n" + format_records(top),
+        "Least busy 1.5-hour period:\n" + format_records(least),
     ]
     return "\n\n".join(sections) + "\n"
