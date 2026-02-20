@@ -1,0 +1,30 @@
+from traffic_counter.models import TrafficRecord
+
+
+def format_total(total: int) -> str:
+    return str(total)
+
+
+def format_daily(daily: list[tuple[str, int]]) -> str:
+    return "\n".join(f"{date} {count}" for date, count in daily)
+
+
+def format_records(records: list[TrafficRecord]) -> str:
+    return "\n".join(
+        f"{r.timestamp.isoformat()} {r.count}" for r in records
+    )
+
+
+def format_report(
+    total: int,
+    daily: list[tuple[str, int]],
+    top: list[TrafficRecord],
+    least: list[TrafficRecord],
+) -> str:
+    sections = [
+        format_total(total),
+        format_daily(daily),
+        format_records(top),
+        format_records(least),
+    ]
+    return "\n\n".join(sections) + "\n"

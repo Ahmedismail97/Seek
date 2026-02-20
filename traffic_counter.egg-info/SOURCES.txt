@@ -1,0 +1,17 @@
+pyproject.toml
+tests/test_analysis.py
+tests/test_formatter.py
+tests/test_main.py
+tests/test_parser.py
+traffic_counter/__init__.py
+traffic_counter/analysis.py
+traffic_counter/formatter.py
+traffic_counter/main.py
+traffic_counter/models.py
+traffic_counter/parser.py
+traffic_counter.egg-info/PKG-INFO
+traffic_counter.egg-info/SOURCES.txt
+traffic_counter.egg-info/dependency_links.txt
+traffic_counter.egg-info/entry_points.txt
+traffic_counter.egg-info/requires.txt
+traffic_counter.egg-info/top_level.txt
